@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name nodemcu)(type Legacy)(uri ${KIPRJMOD}/nodemcu.lib)(options "")(descr ""))
+  (lib (name JACK-C-PC-10A-RA_R_)(type Legacy)(uri ${KIPRJMOD}/JACK-C-PC-10A-RA_R_.lib)(options "")(descr ""))
+)
