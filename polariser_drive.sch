@@ -642,4 +642,6 @@ Text Notes 7900 1000 0    90   ~ 18
 Mechanical Layout
 Wire Notes Line
 	7700 2100 7150 2100
+Text Notes 7300 3300 0    50   ~ 0
+can fit 2x boards in 100x100 with room for a 100x40 board
 $EndSCHEMATC
