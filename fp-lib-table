@@ -1,4 +1,7 @@
 (fp_lib_table
   (lib (name nodemcu)(type KiCad)(uri ${KIPRJMOD}/nodemcu.pretty)(options "")(descr ""))
   (lib (name globteck)(type KiCad)(uri ${KIPRJMOD}/globteck.pretty)(options "")(descr ""))
+  (lib (name Panelization)(type KiCad)(uri ${KIPRJMOD}/Panelization.pretty)(options "")(descr ""))
+  (lib (name flatfle)(type KiCad)(uri ${KIPRJMOD}/flatfle.pretty)(options "")(descr ""))
+  (lib (name flatflex)(type KiCad)(uri ${KIPRJMOD}/flatflex.pretty)(options "")(descr ""))
 )
