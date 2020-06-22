@@ -14,19 +14,19 @@ cal = open("PolariserCal.mat");
 
 ber = 1; pang = 45; %% goto middle of range
 Is = []; pangs = []; bers = []; %% initialise 'state' storage
-anglestep = 1.2*(45/2);
+anglestep = 1.2*(45/2); %% give binsearch a bit more headroom for noise
 iter = 1;
 while ~((target*lb < ber) && (ber < target*ub))
     polariser_goto(pang);
-    if iter > 12
+    if iter > 13
         break;  % polariser angle resolution limit
     end
     
-    %% generate fake BER
-    disp(pang);
+    %% generate fake BER... REPLACE ME WITH A "GET BER" code
+    fprintf("going to %3.4f degrees, step size %3.4f\n", pang, anglestep);
     I = cal.I0_est*(cosd(pang)^2);
     ber = 10*exp(-I); % simulate ber performance
-    ber = ber + 0.5*ber.*randn(); % add noise
+    ber = ber + 0.2*ber.*randn(); % add noise
 
     if ber > 0.5
         ber = 0.5;
@@ -54,4 +54,10 @@ while ~((target*lb < ber) && (ber < target*ub))
     end
 
     anglestep = anglestep/2;
+end
+
+
+
+if ~((target*lb < ber) && (ber < target*ub))
+    warning("At Resolution Limit - BER target not achieved");
 end
