@@ -9,3 +9,6 @@ Contains the arduino code required to program an ESP8266 nodeMCU dev board to in
 
 ## matlab/
 Contains MATLAB code to interface with the ESP8266 over a serial interface.
+
+## todo:
+- CAD mount for the polariser.
